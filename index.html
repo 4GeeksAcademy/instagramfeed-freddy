@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Instagram feed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .nav-tabs .nav-link span {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-light bg-light justify-content-between px-4">
+    <a class="navbar-brand">
+        <span class="fa-brands fa-instagram"></span>
+        <strong>Instagram</strong></a>
+    <div>
+      <button class="btn btn-success me-3" data-bs-toggle="modal" data-bs-target="#createPostModal">Create a new post</button>
+      <div class="dropdown d-inline">
+        <button class="btn btn-light border" data-bs-toggle="dropdown">
+          <span class="fas fa-cog"></span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" >Profile</a></li>
+          <li><a class="dropdown-item" >Accessibility</a></li>
+          <li><a class="dropdown-item" >Privacy and Data</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger">Log out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- VIEW TABS -->
+  <ul class="nav nav-tabs justify-content-center my-3" id="viewTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid" type="button" role="tab">
+        <span class="fa-solid fa-grip"><span/>
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link " id="feed-tab" data-bs-toggle="tab" data-bs-target="#feed" type="button" role="tab">
+        <span class="fa-solid fa-grip-vertical"></span>
+      </button>
+    </li>
+
+  </ul>
+  <div class="tab-content" id="viewTabsContent">
+
+ <!-- GRID VIEW -->
+<div class="tab-pane fade show active" id="grid" role="tabpanel">
+  <div class="container mt-4">
+    <div class="row row-cols-3 g-2">
+      <!-- Imagen 1 -->
+      <div class="col">
+        <img src=" https://i0.wp.com/goldeneraboxing.com/wp-content/uploads/2024/04/IMG_6621.jpeg?resize=1110%2C1065&ssl=1" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+      </div>
+      <!-- Imagen 2 -->
+      <div class="col">
+        <img src="https://img.vavel.com/gj9n1v9w4aeeukl-1711857120110.jfif" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+      </div>
+      <!-- Imagen 3 -->
+      <div class="col">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Issac_Cruz.webp" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+      </div>
+      <!-- Imagen 4 -->
+      <div class="col">
+        <img src="https://tvazteca.brightspotcdn.com/38/64/58ee3e534b94954e243d061513b3/pitbull-cruz-vence-a-giovanni-cabrera-box.jpg" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+      </div>
+      <!-- Imagen 5 -->
+      <div class="col">
+        <img src="https://tvazteca.brightspotcdn.com/1a/5d/f8688dee45adbe99190b3cff1db3/pitbull-cruz-giovanni-cabrera.jpg" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+      </div>
+      <!-- Imagen 6 -->
+      <div class="col">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgT2_yi-k4zfCAFxtzMM23TlpSeXWL9duhvg&s" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+      </div>
+            <!-- Imagen 7 -->
+      <div class="col">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR1bjaWmWB4sKPVrsraWf0ZH0Ph1kL2NzRew&s" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+      </div>
+      <!-- Imagen 8 -->
+      <div class="col">
+        <img src="https://tvazteca.brightspotcdn.com/8b/a4/a85367804df2a5ee93cacc255a6b/gervontadavis-contra-isaac-cruz3.jpg" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+      </div>
+      <!-- Imagen 9 -->
+      <div class="col">
+        <img src="https://cdn.milenio.com/uploads/media/2021/12/05/gervonta-davis-vs-pitbull-cruz.jpg" class="img-fluid w-100" style="aspect-ratio: 1/1; object-fit: cover;">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <!-- FEED VIEW -->
+    <div class="tab-pane fade" id="feed" role="tabpanel">
+        <!-- Imagen 1 -->
+      <div class="card my-4 mx-auto" style="max-width: 500px;">
+        <div class="card-header d-flex justify-content-between">
+          <strong>Gran victoria</strong>
+          <small>30/03</small>
+        </div>
+        <img src="https://i0.wp.com/goldeneraboxing.com/wp-content/uploads/2024/04/IMG_6621.jpeg?resize=1110%2C1065&ssl=1" class="card-img-top" alt="Romero3">
+        <div class="card-body">
+          <p><strong>34,8 mil Likes</strong></p>
+          <p>Con esfuerzo y disciplina lo conseguimos, una victoria mas</p>
+        </div>
+      </div>
+      <!-- Imagen 2 -->
+            <div class="card my-4 mx-auto" style="max-width: 500px;">
+        <div class="card-header d-flex justify-content-between">
+          <strong>Listos para dar guerra!</strong>
+          <small>29/03</small>
+        </div>
+        <img src="https://img.vavel.com/gj9n1v9w4aeeukl-1711857120110.jfif" class="card-img-top" alt="Romero2">
+        <div class="card-body">
+          <p><strong>16 mil Likes</strong></p>
+          <p>Preparados para dar lo mejor, junto a mi equipo</p>
+        </div>
+      </div>
+      <!-- Imagen 3 -->
+            <div class="card my-4 mx-auto" style="max-width: 500px;">
+        <div class="card-header d-flex justify-content-between">
+          <strong>Estamos en el peso!</strong>
+          <small>26/08</small>
+        </div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Issac_Cruz.webp" class="card-img-top" alt="Romero1">
+        <div class="card-body">
+          <p><strong>41 mil Likes</strong></p>
+          <p>Todo un camino para este dia poder llegar, gracias a todos</p>
+        </div>
+      </div>
+      <!-- Imagen 4 -->
+            <div class="card my-4 mx-auto" style="max-width: 500px;">
+        <div class="card-header d-flex justify-content-between">
+          <strong>Gran victoria contra cabrera</strong>
+          <small>29/07/2023</small>
+        </div>
+        <img src="https://tvazteca.brightspotcdn.com/38/64/58ee3e534b94954e243d061513b3/pitbull-cruz-vence-a-giovanni-cabrera-box.jpg" class="card-img-top" alt="Cabrera2">
+        <div class="card-body">
+          <p><strong>69,4 mil Likes</strong></p>
+          <p>Lo conseguimos, lo consegui</p>
+        </div>
+      </div>
+      <!-- Imagen 5 -->
+            <div class="card my-4 mx-auto" style="max-width: 500px;">
+        <div class="card-header d-flex justify-content-between">
+          <strong>Estamo en el peso,preparados para morir</strong>
+          <small>28/07/2023</small>
+        </div>
+        <img src="https://tvazteca.brightspotcdn.com/1a/5d/f8688dee45adbe99190b3cff1db3/pitbull-cruz-giovanni-cabrera.jpg" class="card-img-top" alt="cabrera1">
+        <div class="card-body">
+          <p><strong>73,2 Likes</strong></p>
+          <p>Mañana demostraremos porque estamos aqui!</p>
+        </div>
+      </div>
+      <!-- Imagen 6 -->
+            <div class="card my-4 mx-auto" style="max-width: 500px;">
+        <div class="card-header d-flex justify-content-between">
+          <strong>Con todo</strong>
+          <small>04/09/2022</small>
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgT2_yi-k4zfCAFxtzMM23TlpSeXWL9duhvg&s" class="card-img-top" alt="Ramirez2">
+        <div class="card-body">
+          <p><strong>54,5 mil Likes</strong></p>
+          <p>Una victoria mas</p>
+        </div>
+      </div>
+      <!-- Imagen 7 -->
+            <div class="card my-4 mx-auto" style="max-width: 500px;">
+        <div class="card-header d-flex justify-content-between">
+          <strong>Listos para dar guerra</strong>
+          <small>03/09/2022</small>
+        </div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR1bjaWmWB4sKPVrsraWf0ZH0Ph1kL2NzRew&s" class="card-img-top" alt="Ramirez1">
+        <div class="card-body">
+          <p><strong>85,5 Likes</strong></p>
+          <p>Vamos a demostrar porque estamos aqui</p>
+        </div>
+      </div>
+      <!-- Imagen 8 -->
+            <div class="card my-4 mx-auto" style="max-width: 500px;">
+        <div class="card-header d-flex justify-content-between">
+          <strong>Levantar cabeza y seguir</strong>
+          <small>05/12/2021</small>
+        </div>
+        <img src="https://tvazteca.brightspotcdn.com/8b/a4/a85367804df2a5ee93cacc255a6b/gervontadavis-contra-isaac-cruz3.jpg" class="card-img-top" alt="gervonta2">
+        <div class="card-body">
+          <p><strong>400,54 mil Likes</strong></p>
+          <p>Pese a que lo deje todo en el ring, esta vez no pudo ser</p>
+        </div>
+      </div>
+      <!-- Imagen 9 -->
+            <div class="card my-4 mx-auto" style="max-width: 500px;">
+        <div class="card-header d-flex justify-content-between">
+          <strong>Un gran momento para demostrarlo todo!</strong>
+          <small>04/12/2021</small>
+        </div>
+        <img src="https://cdn.milenio.com/uploads/media/2021/12/05/gervonta-davis-vs-pitbull-cruz.jpg" class="card-img-top" alt="gervonta1">
+        <div class="card-body">
+          <p><strong>520,65 mil Likes</strong></p>
+          <p>Mañana dare lo mejor de mi,por vosotros, todos los que me apoyais</p>
+        </div>
+      </div>
+    </div>
+
+  <!-- CREATE POST MODAL -->
+  <div class="modal fade" id="createPostModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Create a new post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <label for="caption">Caption:</label>
+          <textarea class="form-control mb-3" id="caption" placeholder="Add the caption of your post here"></textarea>
+          <button class="btn btn-outline-secondary me-2"><span class="fas fa-camera"></></button>
+          <button class="btn btn-outline-secondary"><span class="fas fa-map-marker-alt"></span></button>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-success">Publish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
